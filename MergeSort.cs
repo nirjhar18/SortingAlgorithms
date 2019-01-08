@@ -43,9 +43,7 @@ Step 5     {30,40}     {10,30,40}             {5,87,90}
        */
         public override void mergeSort(int[] arr, int left, int right)
         {
-            if (left < right)
-            {
-
+           
                 int middle = (left + right) / 2;
 
                 //Sort first halve
@@ -58,7 +56,6 @@ Step 5     {30,40}     {10,30,40}             {5,87,90}
 
                 Merge(arr, left, middle, right);
 
-            }
         }
 
         //Function to merge two halves
