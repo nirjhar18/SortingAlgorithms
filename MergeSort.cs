@@ -12,7 +12,7 @@ namespace SortingAlgorithms
         /*Merge Sort
        Divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. 
        MergeSort(arr[], l,  r)   O(nlogn)
-       If r > l
+       If r > l, right is arr.Length - 1 and left is 0
     1. Find the middle point to divide the array into two halves:  
             middle m = (l+r)/2
     2. Call mergeSort for first half:   
@@ -43,6 +43,8 @@ Step 5     {30,40}     {10,30,40}             {5,87,90}
        */
         public override void mergeSort(int[] arr, int left, int right)
         {
+           if (right > left)
+           {
            
                 int middle = (left + right) / 2;
 
@@ -55,6 +57,7 @@ Step 5     {30,40}     {10,30,40}             {5,87,90}
                 //Merge everything
 
                 Merge(arr, left, middle, right);
+            }
 
         }
 
